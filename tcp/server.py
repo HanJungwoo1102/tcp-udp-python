@@ -17,8 +17,8 @@ class TCPServer:
 		try:
 			while True:
 				connectionSocket, clientAddress = serverSocket.accept()
-				message = connectionSocket.recv(self.bufferSize)
-				modifiedMessage = message.decode().upper()
+				receivedMessage = connectionSocket.recv(self.bufferSize)
+				modifiedMessage = receivedMessage.decode().upper()
 				connectionSocket.send(modifiedMessage.encode())
 				connectionSocket.close()
 		except KeyboardInterrupt:

@@ -14,8 +14,8 @@ class UDPServer:
 
 		try:
 			while True:
-				message, clientAddress = serverSocket.recvfrom(self.bufferSize)
-				modifiedMessage = message.decode().upper()
+				receivedMessage, clientAddress = serverSocket.recvfrom(self.bufferSize)
+				modifiedMessage = receivedMessage.decode().upper()
 
 				serverSocket.sendto(modifiedMessage.encode(), clientAddress)
 		except KeyboardInterrupt:
