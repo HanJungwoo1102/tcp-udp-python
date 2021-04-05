@@ -1,3 +1,3 @@
-from test import startTCPServer
+from tcpTest import startTestTCPServer
 
-startTCPServer()
+startTestTCPServer()

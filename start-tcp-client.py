@@ -1,3 +1,3 @@
-from test import startTCPClient
+from tcpTest import startTestTCPClient
 
-startTCPClient()
+startTestTCPClient()

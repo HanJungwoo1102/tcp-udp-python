@@ -15,8 +15,8 @@ class TCPClient:
 
         clientSocket.send(encodedMessage)
 
-        message = clientSocket.recv(self.bufferSize)
+        receivedMessage = clientSocket.recv(self.bufferSize)
 
         clientSocket.close()
 
-        return message.decode()
+        return receivedMessage.decode()
