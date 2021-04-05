@@ -15,3 +15,4 @@ class TCPClient:
         receivedMessage = clientSocket.recv(self.bufferSize)
         clientSocket.close()
         return receivedMessage.decode()
+        
