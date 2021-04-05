@@ -7,9 +7,7 @@ class TCPServer:
 
 	def start(self):
 		serverSocket = socket(AF_INET, SOCK_STREAM)
-
 		serverSocket.bind(('', self.port))
-
 		serverSocket.listen(1)
 
 		print("The server is ready to receive.")

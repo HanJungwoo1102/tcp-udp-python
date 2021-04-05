@@ -10,13 +10,8 @@ class TCPClient:
     def start(self):
         clientSocket = socket(AF_INET, SOCK_STREAM)
         clientSocket.connect((self.serverName, self.serverPort))
-        
         encodedMessage = self.message.encode()
-
         clientSocket.send(encodedMessage)
-
         receivedMessage = clientSocket.recv(self.bufferSize)
-
         clientSocket.close()
-
         return receivedMessage.decode()

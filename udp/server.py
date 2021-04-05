@@ -7,7 +7,6 @@ class UDPServer:
 
 	def start(self):
 		serverSocket = socket(AF_INET, SOCK_DGRAM)
-
 		serverSocket.bind(('', self.port))
 
 		print("The server is ready to receive.")
@@ -16,7 +15,6 @@ class UDPServer:
 			while True:
 				receivedMessage, clientAddress = serverSocket.recvfrom(self.bufferSize)
 				modifiedMessage = receivedMessage.decode().upper()
-
 				serverSocket.sendto(modifiedMessage.encode(), clientAddress)
 		except KeyboardInterrupt:
 			print("Press Ctrl-C to terminate while statement")
