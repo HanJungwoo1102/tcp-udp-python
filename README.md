@@ -8,7 +8,7 @@
 
 ```
 python3 start-tcp-server.py
-````
+```
 
 아래 터미널이 테스트 TCP 클라이언트를 실행시킨 터미널
 
