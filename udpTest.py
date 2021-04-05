@@ -6,16 +6,16 @@ PORT = 12000
 BUFFER_SIZE = 2048
 
 def startTestUDPServer():
-	print('start')
+	print('Start')
 	server = UDPServer(PORT, BUFFER_SIZE)
 	server.start()
 
 def startTestUDPClient():
-	print('start')
+	print('Start')
 	message = input("Input lowercase sentence: ")
 
-	client = UDPClient('127.0.0.1', PORT, message, BUFFER_SIZE)
+	client = UDPClient(SERVER_NAME, PORT, message, BUFFER_SIZE)
 	
 	receivedMessage = client.start()
 
-	print('received message: ' + receivedMessage)
+	print('Received message: ' + receivedMessage)

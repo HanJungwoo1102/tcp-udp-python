@@ -6,16 +6,16 @@ PORT = 12000
 BUFFER_SIZE = 2048
 
 def startTestTCPServer():
-	print('start')
+	print('Start')
 	server = TCPServer(PORT, BUFFER_SIZE)
 	server.start()
 
 def startTestTCPClient():
-	print('start')
+	print('Start')
 	message = input("Input lowercase sentence: ")
 
-	client = TCPClient('127.0.0.1', PORT, message, BUFFER_SIZE)
+	client = TCPClient(SERVER_NAME, PORT, message, BUFFER_SIZE)
 	
 	receivedMessage = client.start()
 
-	print('response message: ' + receivedMessage)
+	print('Response message: ' + receivedMessage)
